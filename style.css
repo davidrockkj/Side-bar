@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400;500;700&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+:root
+{
+    --azul: #213E98;
+    --branco: #ffffff;
+    --azul-escuro: #0A1E5B;
+}
+
+body
+{
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: var(--azul);
+}
+
+.container {
+    position: relative;
+    width: 100%;
+}
+
+.navigation
+{
+    position: fixed;
+    width: 277px;
+    height: 100%;
+    background-color: var(--azul);
+    border-left: 13px solid var(--branco);
+    /* border-right: 10px solid var(--branco); */
+    /* transition: 0.5s; */
+    overflow: hidden;
+}
+
+
+.navigation ul
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.navigation ul li
+{
+    position: relative;
+    width: 200%;
+    list-style-type: none;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+/* Configurando hover para todos os elementos de navigation */
+.navigation ul li:hover
+{
+    background: var(--azul-escuro);
+}
+
+/* Propriedades para os menor igual a 2 */
+.navigation ul li:nth-child(-n+2)
+{
+    /* margin-bottom: 40px; */
+    /* Desativa os efeitos do cursor (hover) */
+    pointer-events: none;
+}
+
+.navigation ul li a .logo
+{
+    min-width: 280px;
+    margin: 20px 0 0 0;
+    display: flex;
+    justify-content: center;
+    height: 80px;
+    
+}
+
+.navigation ul li a
+{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: var(--branco);
+}
+
+.navigation ul li a .icon
+{
+    position: relative;
+    display: block;
+    min-width: 70px;
+    height: 50px;
+    line-height: 57px;
+    text-align: center;
+}
+
+/* Propriedades apenas para o 1 elemento (Sistema de Agendamento) */
+.navigation ul li a .title:nth-child(1)
+{
+    font-size: 20px;
+    text-align: center;
+    margin: 10px 0 40px 0;
+    width: 280px;
+    display: block;
+    justify-content: center;
+}
+
+/* Propriedades para o 2 elemento em diante */
+.navigation ul li a .title:nth-child(n+2)
+{
+    position: relative;
+    display: block;
+    font-size: 14px;
+    left: 5px;
+    height: 50px;
+    line-height: 50px;
+    text-align: start;
+    white-space: nowrap;
+    
+}
+
+/* .navigation ul span img .logo
+{
+    width: 0;
+} */
+
